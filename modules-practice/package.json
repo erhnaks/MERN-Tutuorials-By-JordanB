@@ -1,0 +1,9 @@
+{
+  "name": "modules-practice",
+  "version": "1.0.0",
+  "description": "Node Practices",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}

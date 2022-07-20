@@ -1,0 +1,194 @@
+MongoDB Exercises given by JordanB!
+
+Tutorial- Exercises
+
+1- Create a new database called document_practice=
+
+use document_practice;
+
+2- Create a collection called 'people'=
+
+db.createCollection('people');
+
+3- Create an object to represent yourself - 
+this object should contain information like; 
+first name, surname, age, height and hobbies=
+
+db.collectionName.insertOne({
+
+"firstName" : "John",
+"lastName" : "Doe",
+"age" : 30,
+"height" : 180,
+"Hobbies" : 
+	[
+	"Walking",
+	"5a side football",
+	"films",
+	"Programming"
+	]
+})
+
+4-  Do the same for everyone in your row in *one query* as *Many query*= Leave no spaces in between the following syntaxes; 
+
+
+db.people.insertMany(
+ [
+	{
+		"firstName" : "Bob",
+		"lastName" : "Dhilly",
+		"age" : 20,
+		"height" : 160,
+		"Hobbies" : 
+	[
+		"Fishing",
+		"Cooking",
+		"films",
+		"Go-carting"
+	]
+	},	
+	{
+		"firstName" : "Alex",
+		"lastName" : "Ferguson",
+		"age" : 60,
+		"height" : 170,
+		"Hobbies" : 
+	[
+		"Harry Maquire",
+		"Rooney",
+		"King",
+		"Winner"
+	]
+	},
+	{
+		"firstName" : "Pepe",
+		"lastName" : "Sudo",
+		"age" : 20,
+		"height" : 180,
+		"Hobbies" : 
+	[
+		"Pizza",
+		"honey",
+		"singing",
+		"Winner2Be"
+	]
+	},
+	{
+		"firstName" : "Wilma",
+		"lastName" : "Filinstone",
+		"age" : 100,
+		"height" : 80,
+		"Hobbies" : 
+	[
+		"Stone",
+		"Barney",
+		"Dino"
+	]
+	}
+])
+
+
+5- From now on we will be using the answer for the previous question as the practice dataset.
+Wilma starts playing roulette.
+
+db.people.updateOne(
+{
+ 	"firstName" : "Wilma",
+	"lastName" : "Filinstone"
+	},
+	{
+		"$push": {
+				"hobbies": "Roulette"
+			 }
+	})
+
+
+
+6- Pepe stops eating pizza=
+
+db.people.updateOne(
+{
+ 	"firstName" : "Pepe",
+	"lastName" : "Sudo"
+	},
+	{
+		"$pull": {
+				"hobbies": "Pizza"
+			 }
+	})
+
+
+7- Find everyone = 
+
+db.people.find(
+{},
+  {
+	"_id": true,
+	"firstName": true,
+	"lastName": true
+  }
+)
+
+8- Find everyone over 30;
+
+db.people.find(
+    {
+        "age": {
+            "$gte": 30
+            }
+    }
+)
+
+
+
+db.people.find(
+    {},
+    {
+        "firstName": true,
+        "lastName": true
+    }
+)
+
+9- Find everyone less than age = 30 but this time with their name and surname :
+
+db.people.find(
+    {
+        "age": {"$lte": 30}
+    },
+    {
+        "_id": false,
+        "firstName": true,
+        "surName": true
+    }
+)
+
+10- Everyone over 30 now wear glasses;
+
+db.people.updateMany(
+    {
+        "age": {"$gte": 30}
+    },
+    {
+        "$set": {"glasses": true}
+    }
+)
+
+11. Pepe decides to buy a dog, update his document in the collection to have an *embedded* document representing this dog (name this field 'pet'). 
+Make sure to give the embedded doc sufficient information (e.g. name, age, species)
+
+Solution:
+
+db.people.updateOne(
+    {
+        "firstName": "Pepe"
+    },
+    {
+        "$set": {
+            "pet": {
+                "name": "Rex",
+                "age": 12,
+                "species": "dog"
+            }
+        }
+    }
+)
