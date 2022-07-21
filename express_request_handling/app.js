@@ -28,5 +28,15 @@ app.post('/replace/:index', (req, res) => {
   res.status(202).send(`${old} successfully replaced with ${name}`);
 });
 
+//const name =  name;
 
-// app.post('/create/1?name=erhan'), (req, res) => console.log(res);
+
+app.post('/create', (req, res) => {
+
+  let name = req.query.name;
+  //const index = req.params/index;
+  // const old = names[index];
+  // names[index] = name;
+  res.status(201).send(` ${name}`);
+
+});
