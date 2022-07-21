@@ -8,8 +8,14 @@ app.get('/', (req, res) => res.send('Hello, my name is JH!'));
 
 let names = ['Erhan', 'Cameron', 'Mohamed', 'Lewis'];
 
-//GetAll method
-app.get('/getAll', (req, res) => res.send(names));
+// GetAll method
+
+const logger2 = (req, res, next) =>{
+  console.log("getAll");  
+  next();
+  }
+
+app.get('/getAll', logger2, (req, res) => res.send(names));
 
 //getbyID method
 app.get ('/get/:id', (reg, res) => res.send(names));
@@ -30,13 +36,14 @@ app.post('/replace/:index', (req, res) => {
 
 //const name =  name;
 
+const logger = (req, res, next) =>{
+console.log("created");
 
-app.post('/create', (req, res) => {
+}
+
+app.post('/create', logger, (req, res) => {
 
   let name = req.query.name;
-  //const index = req.params/index;
-  // const old = names[index];
-  // names[index] = name;
   res.status(201).send(` ${name}`);
 
 });
