@@ -1,4 +1,5 @@
 import "./myName.css";
+import logo from "./myName.png";
 
 const name = () => {
   const myName = {
@@ -14,6 +15,7 @@ const name = () => {
       <h1>{myName.surname}</h1>
       <h1>{myName.age}</h1>
       <h1>{myName.location}</h1>
+      <img class="logo" src={logo} />
     </div>
   );
 };
