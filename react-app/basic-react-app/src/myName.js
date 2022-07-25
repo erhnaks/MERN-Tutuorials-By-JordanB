@@ -6,7 +6,7 @@ const name = () => {
   const myName = {
     firstName: "John",
     surname: "Doe",
-    age: 14,
+    age: 24,
     location: "London",
   };
 
