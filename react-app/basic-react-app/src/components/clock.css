@@ -1,0 +1,19 @@
+.time {
+  color: rgb(10, 10, 90);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+}
+
+button {
+  background-color: rgba(72, 8, 13, 0.982);
+  color: white;
+  border: none;
+  height: 50px;
+  width: 270px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: opacity 0.1s;
+  margin-bottom: 1%;
+}

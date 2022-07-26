@@ -8,16 +8,15 @@ import Dice from "./components/dice";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Greeting from "./components/ComponentWithProps";
+import Clock from "./components/clock";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Header />
-    <Greeting name="Hello World!" />
-    <Greeting p1="Hello Dunya!" />
-    <Greeting p2="12345" />
-    <Greeting p3="!%^*" />
+    <Greeting name="Hello World!" p1="Hello Dunya!" p2="12345" p3="!%^*" />
     <Name />
+    <Clock />
     <Dice />
     <App />
     <>
