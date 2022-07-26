@@ -7,12 +7,18 @@ import reportWebVitals from "./reportWebVitals";
 import Dice from "./components/dice";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import Greeting from "./components/ComponentWithProps";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Header />
+    <Greeting name="Hello World!" />
+    <Greeting p1="Hello Dunya!" />
+    <Greeting p2="12345" />
+    <Greeting p3="!%^*" />
     <Name />
+
     <Dice />
     <App />
     <>
