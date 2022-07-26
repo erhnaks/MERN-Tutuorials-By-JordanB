@@ -18,7 +18,6 @@ root.render(
     <Greeting p2="12345" />
     <Greeting p3="!%^*" />
     <Name />
-
     <Dice />
     <App />
     <>
