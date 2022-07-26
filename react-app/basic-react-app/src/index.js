@@ -9,20 +9,24 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import Greeting from "./components/ComponentWithProps";
 import Clock from "./components/clock";
+import Car from "./components/Car";
+import Login from "./components/Login";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Header />
+    <Car />
+    <Login />
+    {/* <Header />    
     <Greeting name="Hello World!" p1="Hello Dunya!" p2="12345" p3="!%^*" />
     <Name />
     <Clock />
-    <Dice />
-    <App />
-    <>
+    <Dice /> */}
+    {/* <App /> */}
+    {/* <>
       <h1>Footer</h1>
       <Footer />
-    </>
+    </> */}
   </React.StrictMode>
 );
 
