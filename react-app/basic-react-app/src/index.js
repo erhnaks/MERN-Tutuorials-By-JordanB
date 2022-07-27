@@ -17,13 +17,16 @@ import Basket from "./components/Basket";
 import Shopping from "./hooks/Shopping";
 import LessText from "./hooks/LessText";
 import Greet from "./hooks/Greet";
+import CatFact from "./hooks/CatFact";
+import NotDog from "./hooks/CatFact";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <LessText text='Heyyo '  />
-    <Greet name='Simon' />
+    <NotDog />
 
+    {/* <LessText text='Heyyo '  />
+    <Greet name='Simon' /> */}
     {/* <Shopping /> */}
     {/* <Car />
     <Login /> */}
