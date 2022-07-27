@@ -9,7 +9,7 @@ const LessText = ({ text, maxLength }) => {
 
   return (
     <span>
-      {hidden ? `${text.substr(0, maxLength).trim()}...` : text}
+      {hidden ? `${text.substring(0, maxLength).trim()}...` : text}
 
       {hidden ? (
         <a onClick={() => setHidden(false)}>Read More</a>
