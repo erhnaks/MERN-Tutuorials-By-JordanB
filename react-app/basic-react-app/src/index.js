@@ -11,12 +11,16 @@ import Greeting from "./components/ComponentWithProps";
 import Clock from "./components/clock";
 import Car from "./components/Car";
 import Login from "./components/Login";
+import AddItems from "./components/item";
+import ShoppingCart from "./components/ShoppingCart";
+import Basket from "./components/Basket";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Car />
-    <Login />
+    
+    {/* <Car />
+    <Login /> */}
     {/* <Header />    
     <Greeting name="Hello World!" p1="Hello Dunya!" p2="12345" p3="!%^*" />
     <Name />
@@ -27,6 +31,9 @@ root.render(
       <h1>Footer</h1>
       <Footer />
     </> */}
+    {/* <AddItems/>
+    <ShoppingCart/>
+    <Basket/> */}
   </React.StrictMode>
 );
 
