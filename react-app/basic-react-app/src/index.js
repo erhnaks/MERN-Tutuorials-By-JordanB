@@ -14,11 +14,17 @@ import Login from "./components/Login";
 import AddItems from "./components/item";
 import ShoppingCart from "./components/ShoppingCart";
 import Basket from "./components/Basket";
+import Shopping from "./hooks/Shopping";
+import LessText from "./hooks/LessText";
+import Greet from "./hooks/Greet";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    
+    {/* <LessText />
+    <Greet /> */}
+
+    {/* <Shopping /> */}
     {/* <Car />
     <Login /> */}
     {/* <Header />    
